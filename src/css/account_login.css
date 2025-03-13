@@ -1,0 +1,89 @@
+/* || ACCOUNT LOGIN || */
+.section__login {
+  padding-top: 2rem;
+  min-height: 60vh;
+  max-width: 416px;
+}
+
+.login__heading {
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.login__heading a {
+  line-height: 0;
+}
+
+.login__form {
+  gap: 2rem;
+}
+
+.login__form-input {
+  gap: 2rem;
+}
+
+.input__field {
+  padding: 0.5rem 2.25rem;
+  width: 100%;
+}
+
+.input-icon {
+  align-items: center;
+}
+
+.icon span {
+  padding: 0.5rem;
+}
+
+.icon {
+  position: absolute;
+}
+
+.login__remember-forgot {
+  justify-content: space-between;
+  font-size: var(--font-size-m-b-s);
+}
+
+.login__remember {
+  gap: 0.25rem;
+}
+
+.login__forgot {
+  cursor: pointer;
+}
+
+.login__forgot,
+.login__register-link {
+  font-weight: 700;
+}
+
+.login__forgot:hover,
+.login__register-link:hover {
+  color: var(--primary-color-normal);
+}
+
+.login__forgot:active,
+.login__register-link:active {
+  color: var(--primary-color-hover);
+}
+
+.login__register-text-link {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .section__login {
+    padding-top: 3rem;
+    padding: var(--padding-content-desktop);
+  }
+
+  .login__back {
+    display: none;
+  }
+
+  .login__remember-forgot {
+    font-size: var(--font-size-d-b-s);
+  }
+}

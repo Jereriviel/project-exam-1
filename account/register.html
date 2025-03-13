@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create an Back to Basics account here." />
+    <title>Back to Basics | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=add,arrow_back_ios,arrow_forward_ios,chevron_left,chevron_right,close,lock,person,search,share&display=block"
+    />
+    <link rel="stylesheet" href="../src/css/styles.css" />
+    <link rel="stylesheet" href="../src/css/account_register.css" />
+    <link rel="icon" href="../assets/icons/backtobasics_favicon.png" />
+    <script defer src="/src/js/main.js"></script>
+    <script defer src="/src/js/register.js"></script>
+  </head>
+  <header>
+    <div class="header__content flex__column">
+      <nav class="navigation flex__row" id="nav_links">
+        <a href="/account/login.html" class="nav__sign-in">Sign in</a>
+        <p>|</p>
+        <a href="/account/register.html" class="nav__register">Register</a>
+      </nav>
+      <div class="logo-slogan flex__column">
+        <a href="/index.html">
+          <img
+            srcset="
+              /assets/logos/backtobasics_logo_1446w.png 1446w,
+              /assets/logos/backtobasics_logo_908w.png   908w
+            "
+            sizes="(max-width: 600px) 214px, (min-width: 601px) 326px"
+            src="/assets/logos/backtobasics_logo_908w.png"
+            alt="Back to Basics logo"
+          />
+        </a>
+        <h4>Searching for joy in the little things in life</h4>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="loader"></div>
+    <section class="section__register container flex__column">
+      <div class="register__heading flex__row">
+        <a href="../index.html" aria-label="Go back" class="register__back"
+          ><span class="material-symbols-outlined"> arrow_back_ios </span></a
+        >
+        <h2>Register User</h2>
+      </div>
+      <form
+        class="register__form flex__column"
+        name="register"
+        id="register_form"
+      >
+        <div class="register__field flex__column">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name-register"
+            id="name_register"
+            placeholder="First and last name"
+            required
+          />
+        </div>
+        <div class="register__field flex__column">
+          <label for="email_register">Email Address</label>
+          <input
+            type="text"
+            name="email-register"
+            id="email_register"
+            placeholder="example@email.com"
+            required
+          />
+        </div>
+        <div class="register__field flex__column">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password-register"
+            id="password_register"
+            placeholder="Minimum 8 characters"
+            required
+            minlength="8"
+          />
+        </div>
+        <div class="register__field flex__column">
+          <label for="password_confirm">Confirm Password</label>
+          <input
+            type="password"
+            name="password-confirm"
+            id="password_confirm"
+            placeholder="Minimum 8 characters"
+            required
+            minlength="8"
+          />
+        </div>
+        <button
+          class="button button__primary flex__row button__wide"
+          type="submit"
+        >
+          Register
+        </button>
+        <div class="login__register-text-link flex__row">
+          <p>Don't have an account?</p>
+          <a href="../account/login.html" class="login__register-link"
+            >Sign in here</a
+          >
+        </div>
+      </form>
+    </section>
+
+    <!-- Modals -->
+
+    <dialog class="modal" id="register_success_modal">
+      <div class="flex__column modal__content">
+        <div class="modal__heading flex__row">
+          <h2>Registration successful!</h2>
+          <button class="button__close" onclick="location.href='login.html'">
+            <span class="material-symbols-outlined" aria-label="Close">
+              close
+            </span>
+          </button>
+        </div>
+        <p>Your account has been successfully created. Continue to sign in.</p>
+        <div class="modal__buttons flex__column">
+          <button
+            class="button button__secondary button__wide flex__row"
+            onclick="location.href='login.html'"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="modal" id="register_error_modal">
+      <div class="flex__column modal__content">
+        <div class="modal__heading flex__row">
+          <h2>Oops! Something went wrong.</h2>
+          <button id="close_modal_x" class="button__close">
+            <span class="material-symbols-outlined" aria-label="Close">
+              close
+            </span>
+          </button>
+        </div>
+        <p id="register_error_message"></p>
+        <p>An error occurred and your account was unfortunately not created.</p>
+        <p>Please continue to try again.</p>
+        <div class="modal__buttons flex__column">
+          <button
+            id="close_modal_continue"
+            class="button button__secondary button__wide flex__row"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+  <footer>
+    <div class="footer__content flex__column container">
+      <div class="newsletter flex__column">
+        <h2>Stay Updated</h2>
+        <p>
+          Subscribe to receive notifications about new posts as well as
+          subscriber exclusive content.
+        </p>
+      </div>
+      <div class="subscribe flex__column">
+        <input
+          type="text"
+          placeholder="example@email.com"
+          class="subscribe__input"
+        />
+        <button
+          class="button button__primary flex__row button__wide subscribe__button"
+        >
+          Subscribe
+        </button>
+      </div>
+      <div class="footer__links flex__column">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Advertisement</a>
+        <a href="#">Work with us</a>
+      </div>
+      <div class="social-media flex__column">
+        <h2>Check out our social media</h2>
+        <div class="social-media__icons flex__row">
+          <img src="/assets/icons/instagram_icon.png" alt="Instagram Icon" />
+          <img src="/assets/icons/youtube_icon.png" alt="YouTube Icon" />
+          <img src="/assets/icons/twitter_icon.png" alt="Twitter Icon" />
+          <img src="/assets/icons/facebook_icon.png" alt="Facebook Icon" />
+          <img src="/assets/icons/linkedin_icon.png" alt="LinkedIn Icon" />
+        </div>
+      </div>
+      <p class="copyright">Copyright © 2025 Back to Basics</p>
+    </div>
+  </footer>
+</html>

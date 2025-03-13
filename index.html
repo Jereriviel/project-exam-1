@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Back to Basics is a Lifestyle blog focusing on slowing down and finding joy in the simpler things in life. Here you can read blog posts around topics such as sustainability, gardening, family, mental health, crafts, recipes and more."
+    />
+    <title>Back to Basics | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=add,arrow_back_ios,arrow_forward_ios,chevron_left,chevron_right,close,lock,person,search,share&display=block"
+    />
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/blog_feed.css" />
+    <link rel="icon" href="./assets/icons/backtobasics_favicon.png" />
+    <script defer src="./src/js/main.js"></script>
+    <script defer src="./src/js/banner-carousel.js"></script>
+    <script defer src="./src/js/blog_feed.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header__content flex__column">
+        <nav class="navigation flex__row" id="nav_links">
+          <a href="./account/login.html" class="nav__sign-in">Sign in</a>
+          <p>|</p>
+          <a href="./account/register.html" class="nav__register">Register</a>
+        </nav>
+        <div class="logo-slogan flex__column">
+          <a href="/index.html">
+            <img
+              srcset="
+                ./assets/logos/backtobasics_logo_1446w.png 1446w,
+                ./assets/logos/backtobasics_logo_908w.png   908w
+              "
+              sizes="(max-width: 600px) 214px, (min-width: 601px) 326px"
+              src="./assets/logos/backtobasics_logo_908w.png"
+              alt="Back to Basics logo"
+            />
+          </a>
+          <h4>Searching for joy in the little things in life</h4>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="loader"></div>
+      <div id="snackbar_logout">You are now logged out.</div>
+      <section class="section__banner-carousel">
+        <div class="carousel__container">
+          <div class="carousel__cards"></div>
+          <div class="carousel__arrows flex__row">
+            <div class="arrow__back flex__row">
+              <a
+                ><span class="material-symbols-outlined arrow__back-fixed">
+                  arrow_back_ios
+                </span></a
+              >
+            </div>
+            <div class="arrow__forward flex__row">
+              <a
+                ><span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span></a
+              >
+            </div>
+          </div>
+          <div class="carousel__dots flex__row"></div>
+        </div>
+      </section>
+
+      <section class="section__filters container flex__column">
+        <form class="form__filters flex__column">
+          <div class="form__sort flex__column">
+            <label for="sort">Sort blog posts</label>
+            <select name="Sort by" id="sort">
+              <option value="desc">Newest First</option>
+              <option value="asc">Oldest First</option>
+            </select>
+          </div>
+          <div class="form__filter flex__column">
+            <label for="filter">Filter blog posts by topic</label>
+            <select name="Filter by" id="filter"></select>
+          </div>
+          <!-- <div class="form__search flex__column">
+            <label for="search">Search for blog posts</label>
+            <div class="search__field flex__row">
+              <input
+                type="search"
+                name="Search posts"
+                id="search"
+                placeholder="Search..."
+                class="search__field-input"
+              />
+              <button
+                aria-label="Search"
+                class="button__icon flex__row search__field-button"
+              >
+                <span class="material-symbols-outlined"> search </span>
+              </button>
+            </div>
+          </div> -->
+        </form>
+      </section>
+
+      <section
+        role="feed"
+        class="section__feed container flex__column"
+        id="public_feed"
+      ></section>
+
+      <section class="section__pagination container flex__row" id="pagination">
+        <!-- <button aria-label="Arrow left" class="button__icon flex__row">
+          <span class="material-symbols-outlined"> chevron_left </span>
+        </button> -->
+        <!-- <button aria-label="Arrow right" class="button__icon flex__row">
+          <span class="material-symbols-outlined"> chevron_right </span>
+        </button> -->
+      </section>
+    </main>
+
+    <!-- Modal -->
+
+    <dialog class="modal" id="public_error_modal">
+      <div class="flex__column modal__content">
+        <div class="modal__heading flex__row">
+          <h2>Getting posts failed</h2>
+          <button id="close_modal_x" class="button__close">
+            <span class="material-symbols-outlined" aria-label="Close">
+              close
+            </span>
+          </button>
+        </div>
+        <p id="public_error_message"></p>
+        <p>Please continue to try again.</p>
+        <div class="modal__buttons flex__column">
+          <button
+            id="close_modal_continue"
+            class="button button__secondary button__wide flex__row"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="footer__content flex__column container">
+        <div class="newsletter flex__column">
+          <h2>Stay Updated</h2>
+          <p>
+            Subscribe to receive notifications about new posts as well as
+            subscriber exclusive content.
+          </p>
+        </div>
+        <div class="subscribe flex__column">
+          <input
+            type="text"
+            placeholder="example@email.com"
+            class="subscribe__input"
+          />
+          <button
+            class="button button__primary flex__row button__wide subscribe__button"
+          >
+            Subscribe
+          </button>
+        </div>
+        <div class="footer__links flex__column">
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Advertisement</a>
+          <a href="#">Work with us</a>
+        </div>
+        <div class="social-media flex__column">
+          <h2>Check out our social media</h2>
+          <div class="social-media__icons flex__row">
+            <img src="./assets/icons/instagram_icon.png" alt="Instagram Icon" />
+            <img src="./assets/icons/youtube_icon.png" alt="YouTube Icon" />
+            <img src="./assets/icons/twitter_icon.png" alt="Twitter Icon" />
+            <img src="./assets/icons/facebook_icon.png" alt="Facebook Icon" />
+            <img src="./assets/icons/linkedin_icon.png" alt="LinkedIn Icon" />
+          </div>
+        </div>
+        <p class="copyright">Copyright © 2025 Back to Basics</p>
+      </div>
+    </footer>
+  </body>
+</html>

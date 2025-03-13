@@ -1,0 +1,274 @@
+/* || BLOG FEED || */
+
+.section__banner-carousel {
+  padding-top: 2rem;
+}
+
+.section__banner-carousel img,
+.section__feed img {
+  object-fit: cover;
+  object-position: top;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel__container {
+  position: relative;
+}
+
+.carousel-card {
+  display: none;
+}
+
+.carousel-image {
+  height: 524px;
+}
+
+.carousel-card__title-1,
+.carousel-card__title-2,
+.carousel-card__title-3 {
+  gap: 1rem;
+  width: 100%;
+}
+
+.carousel-card__title-1 {
+  background: var(--gradient-slider-1);
+}
+
+.carousel-card__title-2 {
+  background: var(--gradient-slider-2);
+}
+
+.carousel-card__title-3 {
+  background: var(--gradient-slider-3);
+}
+
+.carousel__arrows {
+  color: var(--neutral-color-white);
+}
+
+.arrow__back,
+.arrow__forward {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  line-height: 0%;
+  cursor: pointer;
+  transition: 0.6s ease;
+  position: absolute;
+  top: 50%;
+}
+
+.arrow__back {
+  margin-left: 0.5rem;
+}
+
+.arrow__forward {
+  right: 0;
+  margin-right: 0.5rem;
+}
+
+.arrow__back:hover,
+.arrow__forward:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.arrow__back-fixed {
+  padding-left: 0.5rem;
+}
+
+.carousel__dots {
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel__dot {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.dot__active {
+  min-height: 1rem;
+  min-width: 1rem;
+  background-color: var(--neutral-color-white);
+}
+.carousel__dot:hover {
+  background-color: var(--neutral-color-white);
+}
+
+.slide-effect {
+  animation-name: slide-effect;
+  animation-duration: 1.5s;
+}
+
+@keyframes slide-effect {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section__filters {
+  padding-bottom: 0;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.form__filters {
+  gap: 1rem;
+}
+
+.form__sort,
+.form__filter,
+.form__search {
+  gap: 0.5rem;
+}
+
+.search__field-input {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.search__field-button {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.section__feed {
+  gap: 2rem;
+}
+
+.section__feed article {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: space-between;
+}
+
+.section__feed article:hover {
+  color: var(--primary-color-normal);
+}
+
+.post__topic {
+  text-transform: uppercase;
+}
+
+.article__header {
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.article__text {
+  gap: 0.5rem;
+}
+
+.article__buttons {
+  justify-content: space-between;
+}
+
+.section__pagination {
+  gap: 1rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .carousel-card__title-1,
+  .carousel-card__title-2,
+  .carousel-card__title-3 {
+    padding: 3rem;
+  }
+
+  .section__filters {
+    padding: var(--padding-content-desktop);
+    padding-bottom: 0;
+  }
+
+  .form__filters,
+  .section__feed {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: flex-start;
+  }
+
+  .form__filters select,
+  .form__filters input {
+    width: 216px;
+  }
+
+  .section__feed {
+    padding: var(--padding-content-desktop);
+  }
+
+  .section__feed article {
+    max-width: 600px;
+    transition: 0.6s ease;
+  }
+
+  .section__pagination {
+    padding: var(--padding-content-desktop);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section__banner-carousel {
+    padding-top: 3rem;
+  }
+
+  .carousel-card {
+    flex-direction: row-reverse;
+  }
+
+  .carousel-image {
+    height: 600px;
+    flex-basis: 67%;
+  }
+
+  .carousel-card__title-1,
+  .carousel-card__title-2,
+  .carousel-card__title-3 {
+    gap: 2rem;
+    padding: var(--padding-content-desktop);
+    max-height: 600px;
+    justify-content: center;
+    flex-basis: 33%;
+  }
+
+  .carousel__dots {
+    gap: 1.5rem;
+  }
+
+  .carousel__dot {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .dot__active {
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+
+  .section__feed article {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section__feed {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,49 @@
+/* || ACCOUNT REGISTER || */
+
+.section__register {
+  padding-top: 2rem;
+  min-height: 60vh;
+  max-width: 416px;
+}
+
+.register__heading {
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.register__heading a {
+  line-height: 0;
+}
+
+.register__form {
+  gap: 2rem;
+}
+
+.register__field {
+  gap: 0.5rem;
+}
+
+.login__register-text-link {
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.login__register-link {
+  font-weight: 700;
+}
+
+.login__register-link:hover {
+  color: var(--primary-color-normal);
+}
+
+@media (min-width: 600px) {
+  .section__register {
+    padding-top: 3rem;
+    padding: var(--padding-content-desktop);
+  }
+
+  .register__back {
+    display: none;
+  }
+}

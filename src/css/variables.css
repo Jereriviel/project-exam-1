@@ -1,0 +1,85 @@
+/* || VARIABLES || */
+
+:root {
+  /* || Colors */
+
+  --primary-color-light: #f3ecf0;
+  --primary-color-light-hover: #ede2e9;
+  --primary-color-light-active: #d9c3d1;
+  --primary-color-normal: #853d69;
+  --primary-color-normal-hover: #6a3154;
+  --primary-color-normal-active: #50253f;
+  --primary-color-dark: #2f1525;
+
+  --secondary-color-light: #e9eeef;
+  --secondary-color-light-hover: #dee5e7;
+  --secondary-color-light-active: #bac9cd;
+  --secondary-color-normal: #21515e;
+  --secondary-color-normal-hover: #1a414b;
+  --secondary-color-normal-active: #16363f;
+  --secondary-color-dark: #0c1c21;
+
+  --neutral-color-white: #ffffff;
+  --neutral-color-light-gray: #e9e9e9;
+  --neutral-color-medium-gray: #b6b6b6;
+  --neutral-color-dark-gray: #6a6a6a;
+  --neutral-color-black: #000000;
+
+  --delete-color-normal: #f6e6e6;
+  --delete-color-normal-hover: #eec9c9;
+  --delete-color-normal-active: #e4a8a8;
+  --delete-color-dark: #460000;
+
+  /* || Gradients */
+
+  --gradient-footer-mobile: linear-gradient(#d4f0f8, #eadde5);
+  --gradient-footer-desktop: linear-gradient(to right, #d4f0f8, #eadde5);
+  --gradient-slider-1: linear-gradient(140deg, #d4f0f8, #cfe0ae);
+  --gradient-slider-2: linear-gradient(140deg, #f8eab6, #d4f0f8);
+  --gradient-slider-3: linear-gradient(140deg, #d4f0f8, #eadde5);
+
+  /* || Font sizes */
+
+  --font-size-m-h1: 2rem;
+  --font-size-m-h2: 1.75rem;
+  --font-size-m-h3: 1.5rem;
+  --font-size-m-h4: 1.125rem;
+
+  --font-size-m-b-l: 1.125rem;
+  --font-size-m-b-m: 1rem;
+  --font-size-m-b-s: 0.875rem;
+  --font-size-m-b-xs: 0.75rem;
+
+  --font-size-d-h1: 3rem;
+  --font-size-d-h2: 2rem;
+  --font-size-d-h3: 1.5rem;
+  --font-size-d-h4: 1.25rem;
+
+  --font-size-d-b-l: 1.25rem;
+  --font-size-d-b-m: 1.125rem;
+  --font-size-d-b-s: 1rem;
+  --font-size-d-b-xs: 0.875rem;
+
+  /* || Padding */
+
+  --padding-xs: 0.5rem;
+  --padding-s: 1rem;
+  --padding-m: 2rem;
+  --padding-l: 3rem;
+
+  --padding-button-mobile: 0.5rem 2rem;
+  --padding-button-desktop: 0.75rem 2rem;
+
+  --padding-input-m: 0.5rem 2rem;
+  --padding-input-d: 1rem;
+
+  --padding-modal-m: 1rem;
+  --padding-modal-d: 2rem;
+
+  --padding-content-mobile: 2rem 1rem;
+  --padding-content-desktop: 3rem;
+
+  /* || Other */
+
+  --corner-radius: 0.25rem;
+}

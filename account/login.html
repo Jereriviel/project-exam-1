@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sign in to your Back to Basics account here."
+    />
+    <title>Back to Basics | Sign In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=add,arrow_back_ios,arrow_forward_ios,chevron_left,chevron_right,close,lock,person,search,share&display=block"
+    />
+    <link rel="stylesheet" href="../src/css/styles.css" />
+    <link rel="stylesheet" href="../src/css/account_login.css" />
+    <link rel="icon" href="../assets/icons/backtobasics_favicon.png" />
+    <script defer src="/src/js/main.js"></script>
+    <script defer src="/src/js/login.js"></script>
+  </head>
+  <header>
+    <div class="header__content flex__column">
+      <nav class="navigation flex__row" id="nav_links">
+        <a href="/account/login.html" class="nav__sign-in">Sign in</a>
+        <p>|</p>
+        <a href="/account/register.html" class="nav__register">Register</a>
+      </nav>
+      <div class="logo-slogan flex__column">
+        <a href="/index.html">
+          <img
+            srcset="
+              /assets/logos/backtobasics_logo_1446w.png 1446w,
+              /assets/logos/backtobasics_logo_908w.png   908w
+            "
+            sizes="(max-width: 600px) 214px, (min-width: 601px) 326px"
+            src="/assets/logos/backtobasics_logo_908w.png"
+            alt="Back to Basics logo"
+          />
+        </a>
+        <h4>Searching for joy in the little things in life</h4>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="snackbar_message">Login successful!</div>
+    <div class="loader"></div>
+    <section class="section__login container flex__column">
+      <div class="login__heading flex__row">
+        <a href="../index.html" aria-label="Go back" class="login__back"
+          ><span class="material-symbols-outlined"> arrow_back_ios </span></a
+        >
+        <h2>Sign in</h2>
+      </div>
+      <form class="login__form flex__column" name="login">
+        <div class="login__form-input flex__column">
+          <div class="input-icon flex__row">
+            <div class="icon">
+              <span class="material-symbols-outlined"> person </span>
+            </div>
+            <input
+              type="text"
+              name="email-login"
+              id="email_login"
+              placeholder="Enter your email"
+              aria-label="Enter your email"
+              class="input__field flex__row"
+              required
+            />
+          </div>
+          <div class="input-icon flex__row">
+            <div class="icon">
+              <span class="material-symbols-outlined"> lock </span>
+            </div>
+            <input
+              type="password"
+              name="password-login"
+              id="password_login"
+              placeholder="Enter your password"
+              aria-label="Enter your password"
+              class="input__field flex__row"
+              required
+              minlength="8"
+            />
+          </div>
+        </div>
+        <div class="login__remember-forgot flex__row">
+          <div class="login__remember flex__row">
+            <input type="checkbox" name="Checkbox" id="checkbox" />
+            <p>Remember me</p>
+          </div>
+          <p class="login__forgot">Forgot password?</p>
+        </div>
+        <button
+          class="button button__primary flex__row button__wide"
+          type="submit"
+        >
+          Login
+        </button>
+        <div class="login__register-text-link flex__row">
+          <p>Don't have an account?</p>
+          <a href="../account/register.html" class="login__register-link"
+            >Register here</a
+          >
+        </div>
+      </form>
+    </section>
+
+    <!-- Modal -->
+
+    <dialog class="modal" id="login_error_modal">
+      <div class="flex__column modal__content">
+        <div class="modal__heading flex__row">
+          <h2>Login unsuccessful</h2>
+          <button id="close_modal_x" class="button__close">
+            <span class="material-symbols-outlined" aria-label="Close">
+              close
+            </span>
+          </button>
+        </div>
+        <p id="login_error_message"></p>
+        <p>Please continue to try again.</p>
+        <div class="modal__buttons flex__column">
+          <button
+            id="close_modal_continue"
+            class="button button__secondary button__wide flex__row"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+  <footer>
+    <div class="footer__content flex__column container">
+      <div class="newsletter flex__column">
+        <h2>Stay Updated</h2>
+        <p>
+          Subscribe to receive notifications about new posts as well as
+          subscriber exclusive content.
+        </p>
+      </div>
+      <div class="subscribe flex__column">
+        <input
+          type="text"
+          placeholder="example@email.com"
+          class="subscribe__input"
+        />
+        <button
+          class="button button__primary flex__row button__wide subscribe__button"
+        >
+          Subscribe
+        </button>
+      </div>
+      <div class="footer__links flex__column">
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Advertisement</a>
+        <a href="#">Work with us</a>
+      </div>
+      <div class="social-media flex__column">
+        <h2>Check out our social media</h2>
+        <div class="social-media__icons flex__row">
+          <img src="/assets/icons/instagram_icon.png" alt="Instagram Icon" />
+          <img src="/assets/icons/youtube_icon.png" alt="YouTube Icon" />
+          <img src="/assets/icons/twitter_icon.png" alt="Twitter Icon" />
+          <img src="/assets/icons/facebook_icon.png" alt="Facebook Icon" />
+          <img src="/assets/icons/linkedin_icon.png" alt="LinkedIn Icon" />
+        </div>
+      </div>
+      <p class="copyright">Copyright © 2025 Back to Basics</p>
+    </div>
+  </footer>
+</html>
