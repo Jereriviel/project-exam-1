@@ -1,6 +1,6 @@
 # Exam Project 1
 
-![image](https://jereriviel.github.io/portfolio/assets/img/thumbnail_backtobasics.png)
+![image](https://jereriviel.github.io/portfolio/assets/img/thumbnail_backtobasics.webp)
 
 ## Description
 
