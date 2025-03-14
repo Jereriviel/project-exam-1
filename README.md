@@ -48,10 +48,6 @@ To run the app, run the following commands:
 npm run start
 ```
 
-## Contributing
-
-If you would like to contribute to this project, please open a pull request so the code can be reviewed.
-
 ## Contact
 
 Contact information will be added at a later stage.
